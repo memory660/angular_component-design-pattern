@@ -1,0 +1,75 @@
+<router-outlet></router-outlet>
+
+<button (click)="isDrawerOpen = true">OPEN</button>
+
+<hr />
+
+<h2>V1</h2>
+
+<app-v1-drawer
+  [isOpen]="isDrawerOpen"
+  (closed)="isDrawerOpen = false"
+></app-v1-drawer>
+
+<hr />
+
+<h2>V2</h2>
+
+<app-v2-drawer [isOpen]="isDrawerOpen" (drawerClosed)="isDrawerOpen = false">
+  <div>
+    <h5>Responses 2</h5>
+  </div>
+  <div>
+    <p>Loved the article 2!</p>
+  </div>
+</app-v2-drawer>
+
+<hr />
+
+<h2>V3</h2>
+
+<app-v3-drawer [isOpen]="isDrawerOpen" (drawerClosed)="isDrawerOpen = false">
+  <div header>
+    <h5>Responses 3</h5>
+  </div>
+  <div class="drawer-body">
+    <p>Loved the article 3!</p>
+  </div>
+</app-v3-drawer>
+
+<hr />
+
+<h2>V4</h2>
+
+<app-v4-drawer
+  [isOpen]="isDrawerOpen"
+  (drawerClosed)="isDrawerOpen = false"
+  #commentDrawer="drawer"
+>
+  <div header>
+    <button class="close" (click)="commentDrawer.close()">X</button>
+    <h5>Responses 4</h5>
+  </div>
+  <div class="drawer-body">
+    <p>Loved the article 4!</p>
+  </div>
+</app-v4-drawer>
+
+<hr />
+
+<h2>V5</h2>
+
+<!--  possible d'ajouter   [style.--drawer-width]="'500px'" (pour une une valeur par défaut) -->
+<app-v5-drawer
+  [isOpen]="isDrawerOpen"
+  (drawerClosed)="isDrawerOpen = false"
+  #commentDrawer="drawer"
+>
+  <div header>
+    <button class="close" (click)="commentDrawer.close()">X</button>
+    <h5>Responses 5</h5>
+  </div>
+  <div class="drawer-body">
+    <p>Loved the article 5!</p>
+  </div>
+</app-v5-drawer>

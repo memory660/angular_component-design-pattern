@@ -1,0 +1,11 @@
+<div class="side-pane-drawer-container" [ngStyle]="drawerStyles">
+  <button class="close" (click)="close()">X</button>
+  <div class="header">
+    <ng-content select="[header]"></ng-content>
+    <!-- selector avec un sélecteur d'attribut  -->
+  </div>
+  <div class="body">
+    <ng-content select=".drawer-body"></ng-content>
+    <!-- selector avec une classe -->
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.drawer-container {
+  border: 1px solid yellow;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  transition: all 300ms;
+}
+
+:host {
+  display: block;
+  --drawer-width: 400px;
+}

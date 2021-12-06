@@ -1,0 +1,31 @@
+.side-pane-drawer-container {
+  border: 1px solid cadetblue;
+  color: cadetblue;
+  position: absolute;
+  top: 100;
+  right: 0;
+  width: 400px;
+  transition: all 300ms;
+}
+
+:host {
+  --drawer-width: 400px;
+}
+
+.drawer-container {
+  // ---
+  width: var(--drawer-width);
+  // ---
+  &.position-right {
+    right: calc(-1 * var(--drawer-width));
+    &.is-open {
+      right: 0;
+    }
+  }
+  &.position-left {
+    left: calc(-1 * var(--drawer-width));
+    &.is-open {
+      left: 0;
+    }
+  }
+}
